@@ -24,11 +24,13 @@ Todo este proceso ha sido prueba y error, si no funciona, se cambia y se vuelve 
 
 - Artista chileno que usa sintetizadores analógicos
 
-- Ha trabajado con Lollapalooza con estructuras interactivas (WhiteSample, 2014) 
+- Ha trabajado con Lollapalooza con estructuras interactivas *(WhiteSample, 2014)* 
 
 - Su música es experimental/electrónica 
 
-![whitesample](./imagenes/whitesample-2.jpg) (WhiteSample & Cargo Collective, 2012)
+![whitesample](./imagenes/whitesample-2.jpg)
+
+> (WhiteSample & Cargo Collective, 2012)
 
 -------------
 
@@ -40,7 +42,9 @@ Todo este proceso ha sido prueba y error, si no funciona, se cambia y se vuelve 
 
 - Forma parte de un colectivo de varios artistas electrónicos chilenos (Team Mekano) 
 
-![anthony1](./imagenes/anthony1.png) (Anthony1, 2022)
+![anthony1](./imagenes/anthony1.png) 
+
+> (Anthony1, 2022)
 
 ----------------
 
@@ -185,52 +189,54 @@ Nuestro sintetizador está formado de 4 módulos:
 
 ### Para tener un flujo de trabajo más ordenado pusimos todos los componentes necesarios para armar una placa de lado. 
 
-> 1era dificultad:
->
-> Tuvimos problemas con la organización en la compra de componentes, listas incompletas.
->
+**1era dificultad:**
+
+- Tuvimos problemas con la organización en la compra de componentes, listas incompletas.
+
 
 ### Soldamos los componentes por tamaño (de más pequeño a más grande) y cables para los que van montados en la carcasa. 
 
-> 2da dificultad:
->
-> También tuvimos problemas con el corte del acrílico para la carcasa.
->
-> 1er corte: Falta de agujeros para componentes y tamaño equivocado.
->
-> 2do corte: Formato no compatible de archivo.
->
-> 3er/4to/5to corte: Parámetros erróneos y líneas de corte extra.
->
-> 6to corte: Por falta de material usamos los restantes de cortes anteriores.
-> 
+**2da dificultad:**
+
+- También tuvimos problemas con el corte del acrílico para la carcasa.
+
+  - **1er corte:** Falta de agujeros para componentes y tamaño equivocado.
+
+  - **2do corte:** Formato no compatible de archivo.
+
+  - **3er/4to/5to corte:** Parámetros erróneos y líneas de corte extra.
+
+  - **6to corte:** Por falta de material usamos los restantes de cortes anteriores.
+
 
 ### Armamos las carcasas con los separadores.
 
-> 3era dificultad:
->
-> Falta de separadores para las carcasas por modificaciones en tamaño.
->
+**3era dificultad:**
 
-### Al tener todo soldado en la placa se empezó a armar la cubierta de acrílico con los separadores *(gracias al grupo 04 por darnos sus separadores restantes)*, pusimos los potenciómetros, entradas/salidas de audio y switch conectados con los cables.
+- Falta de separadores para las carcasas por modificaciones en tamaño.
 
-> 4ta dificultad:
->
-> Funcionamiento correcto de las PCB, soldamos varias veces las placas, cambiamos los componentes y remplazamos los cables, pero no funcionaban. 
->
+
+### Se empezó a armar la cubierta de acrílico con los separadores *(gracias al grupo 04 por darnos sus separadores restantes)*. 
+
+### Pusimos los potenciómetros, entradas/salidas de audio y switch conectados con los cables.
+
+**4ta dificultad:**
+
+- Funcionamiento correcto de las PCB, soldamos varias veces las placas, cambiamos los componentes y remplazamos los cables, pero no funcionaban. 
+
 
 ----------------
 
 ## Carcasa 
 
-> *Escogimos trabajar con acrílico ya que éramos familiares con el material. es fácil de trabajar por su compatibilidad con el corte laser que nos permitía cortar varias carcasas, grabar y lograr un buen oficio. el material es firme, perfecto para lo que teníamos en mente, además es económico.*
+> Escogimos trabajar con acrílico ya que éramos familiares con el material. es fácil de trabajar por su compatibilidad con el corte laser que nos permitía cortar varias carcasas, grabar y lograr un buen oficio. el material es firme, perfecto para lo que teníamos en mente, además es económico.
 >
-> *Una cualidad del acrílico que utilizamos es la transparencia. Buscamos celebrar el diseño de las PCB a través de la transparencia de este, rompiendo la caja negra e invitando a la apreciación integral de cada placa y sus distintos componentes.*
+> Una cualidad del acrílico que utilizamos es la transparencia. Buscamos celebrar el diseño de las PCB a través de la transparencia de este, rompiendo la caja negra e invitando a la apreciación integral de cada placa y sus distintos componentes.
 
 ### Referentes carcasa 
 
-> Para la carcasa usamos estos 3 ejemplos:
->
+Para la carcasa usamos estos 3 ejemplos:
+
 > **CMF Phone - Nothing (Nothing, 2024)**
 >
 > Este dispositivo también utiliza módulos al igual que nuestro sistema. 
