@@ -13,7 +13,10 @@
 
 La inspiración para nuestro proyecto comienza desde el sonido que se produce a partir de uno de nuestros osciladores, el cual era parecido al del chirihue, ave nativa chilena. Además, como antecedente, integrantes de nuestro equipo en la entrega del primer proyecto realizaron un sintetizador que lleva como título “Naturalezas Interconectadas”, proponiendo que distintos tipos de naturalezas interactúan las unas con las otras, teniendo así un comienzo para nuestra investigación.
 
+[Video Chirihue](https://www.youtube.com/shorts/mDQom4hty6A)
+
 ![naturalezas interconectadas](./imagenes/naturalezas.png)
+_Naturalezas Interconectadas_
 
 A partir de esto, nuestra conceptualización surge en base a las teorías de Donna Haraway. La autora propone el concepto de cyborg, planteando la interconexión entre diversos componentes y entornos —incluso componentes artificiales y tecnológicos—, como relaciones extensivas en el constructo de lo vivo.¹ En sus palabras, “un cyborg es un organismo cibernético, un híbrido de máquina y organismo, una criatura de realidad social y también de ficción.” ² 
 
