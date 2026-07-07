@@ -159,6 +159,8 @@ Resonancia complementa el funcionamiento de Comando Estelar incorporando una ló
 
 ## Carcasa
 
+![imagenes](./imagenes/carcasa.png)
+
 La carcasa surge de la decisión de entender la electrónica como parte fundamental del lenguaje del objeto, en lugar de ocultarla bajo un contenedor. Mientras muchos productos tecnológicos esconden sus circuitos detrás de superficies limpias y cerradas, nuestra propuesta busca invertir esa lógica: hacer visibles los componentes, las conexiones y los procesos de fabricación para que el funcionamiento del sintetizador también pueda ser observado.
 
 La estructura fue concebida como un sistema abierto que permite leer visualmente el recorrido de la señal entre los distintos módulos. Cada cable, circuito y punto de conexión permanece expuesto, permitiendo comprender la naturaleza modular del instrumento y evidenciando la relación entre cada placa electrónica.
@@ -170,10 +172,33 @@ El acrílico de color fue utilizado como soporte para los módulos electrónicos
 Las placas PCB, lejos de permanecer ocultas, se convierten en uno de los principales elementos visuales del proyecto. Sus pistas de cobre, componentes soldados y conexiones forman parte de la composición estética del instrumento, haciendo visible el trabajo de diseño electrónico y el proceso de fabricación desarrollado durante el taller.
 En conjunto, estos materiales construyen una carcasa que no busca disimular la tecnología, sino transformarla en el principal recurso expresivo del proyecto. La estructura deja de ser un simple contenedor para convertirse en una interfaz que comunica cómo el sintetizador está construido, cómo funciona y cómo los distintos módulos interactúan entre sí.
 
+## Proceso 
+
+Durante la construcción de la carcasa probamos dos tipos de alambre de distintos grosores para obtener una estructura firme que sostuviera correctamente las placas. Inicialmente utilizamos un alambre más grueso, pero al momento de soldarlo observamos que no adhería correctamente, por lo que optamos por uno más delgado. Además, incorporamos una rejilla metálica estirada y soldada que permitió fijar las placas PCB y los soportes de acrílico. Estas piezas de acrílico fueron modeladas en Rhino 8 y posteriormente fabricadas mediante corte láser.
+
+En el proceso de ensamblaje de las placas surgieron diversas dificultades. El cable utilizado para las conexiones se desoldaba con facilidad al manipular los módulos, por lo que fue reemplazado por un cable de mayor grosor, reduciendo considerablemente este problema. Durante las pruebas también identificamos errores de soldadura que nos permitieron mejorar la precisión del montaje.
+Al finalizar la placa Comando Estelar, realizamos las primeras pruebas y detectamos que no encendía. Mediante el uso del multímetro descubrimos que las polaridades del barrel jack estaban invertidas. Tras corregir ese error, encontramos además soldaduras que se encontraban en contacto entre sí, generando interferencias en las señales del circuito. Como el problema persistía, reemplazamos los circuitos integrados CD4046, CD40106 y el regulador L7805, comprobando que algunos componentes no estaban recibiendo correctamente la alimentación. Después de estos cambios, la placa comenzó a funcionar correctamente. La experiencia adquirida permitió ensamblar las siguientes placas de manera mucho más rápida y precisa.
+
+La placa Relo funcionó correctamente de forma independiente; sin embargo, no fue posible establecer una comunicación funcional con las demás placas, ya que únicamente compartían alimentación, sin lograr una interacción entre sus señales. Finalmente, la placa Parla no alcanzó un funcionamiento estable, por lo que fue descartada como parte del sintetizador final.
+
+![imagenes](./imagenes/procesos-1.png)
+![imagenes](./imagenes/procesos-2.png)
+
 ## composición
 
-partitura e interpretación
+Como parte del proceso de exploración sonora del proyecto, desarrollamos dos partituras gráficas inspiradas en los sonidos generados por nuestros módulos electrónicos. Más que representar las señales de manera convencional, buscamos traducir la experiencia de escucharlas a un lenguaje visual propio, entendiendo la partitura como una herramienta de interpretación y no como un sistema de notación musical tradicional.
 
-detallar operación de la partitura, como se creó, cuales fueron los referentes (citando), cual es la simbología
+El proceso consistió en reunirnos con papel y lápiz mientras el sintetizador permanecía en funcionamiento. Escuchamos atentamente las variaciones de frecuencia, las repeticiones, las pausas y los cambios de ritmo que producían las placas, registrando de manera espontánea las formas, recorridos y patrones que cada sonido evocaba. No existieron reglas previas ni una intención de representar fielmente la estructura musical; el objetivo fue transformar la percepción auditiva en una composición gráfica construida desde la intuición y la observación colectiva.
+
+La primera partitura se desarrolla a partir de la repetición y superposición de formas circulares. El tamaño, la densidad y la distribución de estos elementos buscan expresar la intensidad, la duración y la permanencia de los sonidos, generando una composición donde la acumulación visual refleja la continuidad de las señales emitidas por el sintetizador.
+
+
+La segunda partitura propone un lenguaje más gestual y dinámico. A través de líneas continuas, curvas, oscilaciones y variaciones en el grosor del trazo, representa los cambios de frecuencia, las pausas y el movimiento percibido durante la escucha, enfatizando el carácter variable e impredecible del comportamiento sonoro de las placas.
+Más que documentar el funcionamiento técnico del sistema, estas partituras constituyen una interpretación sensible del instrumento y de la experiencia de interactuar con él. Son el resultado de un proceso colaborativo en el que cada integrante aportó su propia percepción, convirtiendo señales electrónicas en composiciones visuales que evidencian la estrecha relación entre sonido, dibujo y experimentación.
+
+## Referentes 
+
+![imagenes](./imagenes/partituras.png) 
+
 
 ## bibliografía
