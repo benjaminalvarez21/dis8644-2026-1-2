@@ -8,51 +8,96 @@
 + Vanessa García - [cuenta-github](https://github.com/bla)
 + Carla Nuñez - [cuenta-github](https://github.com/bla)
 
-# reporte domingo 
 
-**placas usadas** 
-+ placa 01: oscilador, comando estelar, grupo 03.
-+ placa 02: relo
-+ placa 03: secuenciador, nyan cat, grupo 02
+# Vitrina Sónica 
 
-**placa 01**: El oscilador funcionó en su momento. Lamentablemente, tuvimos que volver a soldar esta placa múltiples veces, se nos soltaban los cables que iban conectados a los potenciometros. Creemos que esto provocó que, al soldarla tantas veces, se deteriorara. Por esta razón, tuvimos que volver a soldar la placa por completo. Sin embargo, al probarla el día viernes y sábado no funcionaba. :( Consultamos con los grupos que estaban utilizando nuestra placa, específicamente con el grupo Piezo, ya que a ellos les funciona correctamente. Nos recomendaron revisar las soldaduras, ya que podrían estar afectando el funcionamiento de los componentes y del chip. Además, queremos probar cambiando los chips para descartar que alguno de ellos se haya dañado durante el proceso de soldadura.
+Vitrina Sónica es un sintetizador modular construido a partir de la integración de distintos módulos desarrollados de manera colaborativa durante el taller. Cada grupo fue responsable del diseño, fabricación y prueba de una placa específica, en nuestro caso, desarrollamos el módulo oscilador, encargado de generar las señales que constituyen la base sonora del instrumento.
 
-**placa 02**: solo prende LED, potenciomentro no hace nada, queremos resolver como conectarlo al secuenciador. 
+El objetivo del proyecto consistía en comprender la lógica de los sintetizadores modulares, donde cada circuito cumple una función determinada y puede conectarse con otros para crear sistemas sonoros más complejos. A partir de esta metodología, diseñamos un instrumento compuesto por módulos independientes que se comunican mediante conexiones externas, permitiendo experimentar con diferentes configuraciones y comportamientos del sonido.
 
-**placa 03**: Aún no hemos probado esta placa. Tenemos muchas dudas respecto a su funcionamiento, por lo que hemos consultado con el Grupo 02 para orientarnos sobre cómo funciona y cómo conectarla correctamente a la placa 01.
+Inicialmente nuestra propuesta contemplaba integrar un oscilador, un secuenciador y un módulo de salida de audio. Sin embargo, el proceso de desarrollo estuvo marcado por múltiples iteraciones, pruebas y ajustes. Durante el ensamblaje surgieron dificultades relacionadas con la compatibilidad entre algunas placas y con el funcionamiento de ciertos circuitos, lo que nos llevó a replantear la configuración del sistema. Finalmente, optamos por construir un sintetizador conformado por dos módulos osciladores y un mixer, logrando un sistema estable que permitía explorar la mezcla y superposición de señales para obtener distintas texturas sonoras.
+La construcción del proyecto estuvo profundamente vinculada al contexto material en el que fue desarrollado. Gran parte de los componentes electrónicos fueron adquiridos en el tradicional barrio San Diego, en Santiago, un lugar reconocido por concentrar tiendas especializadas en electrónica y más. Esta búsqueda y recolección de materiales formó parte del proceso de diseño, ya que las decisiones técnicas estuvieron condicionadas por la disponibilidad real de componentes, obligándonos en varias ocasiones a adaptar el circuito, reemplazar piezas o modificar soluciones para mantener la funcionalidad del sistema.
 
-## ayuda domingo pls y gracias
+Del mismo modo, la estructura del sintetizador responde a una decisión tanto funcional como estética. En lugar de ocultar la electrónica, decidimos exhibirla mediante una carcasa construida con malla de acero, acrílico de color y placas PCB visibles, dejando expuestas las conexiones, los cables y los distintos módulos que conforman el instrumento. Esta transparencia permite comprender cómo circulan las señales entre las placas y convierte el funcionamiento interno en parte de la experiencia visual del proyecto.
 
-+ no sabemos cómo conectarnos entre placas 
-+ no sabemos como conectar el secuenciador al oscilador y relo
-+ comprobar las soldaduras de las placas y cables
+El nombre Vitrina Sónica nace precisamente de esta intención: transformar el sintetizador en una vitrina donde la electrónica se presenta como protagonista. El sistema invita a observar la relación entre sonido, circuitos y materialidad, haciendo visible el proceso de construcción y el carácter modular del instrumento.
 
-## materiales faltante 
+# Placas soldadas
 
-+ no nos faltan materiales
+Durante el desarrollo del proyecto fabricamos dos módulos, ambos diseñados para formar parte de un sistema. Cada placa cumple una función específica dentro del sintetizador modular y fue ensamblada mediante soldadura manual de componentes. Antes del montaje definitivo, cada circuito fue probado en protoboard para verificar su funcionamiento y posteriormente fue diseñado en KiCad para fabricar la PCB.
 
-## atados o dudas
+## Comando Estelar 
 
-+ Tenemos dudas con nuestra carcasa. No queremos que explote, que se queme algún componente o que nos dé la corriente, ya que la mayor parte de la construcción de nuestra carcasa es de alambre. Creemos que este podría actuar como conductor y provocar algún atado, de todas formas cada vez que se hizo una prueba no pasó nada, esta duda es solo para comprobar si seguimos con la misma idea o la cambiamos (ojalá que no porque nos encanta).
+Comando Estelar es el módulo principal de generación sonora del sintetizador. Esta placa fue diseñada para producir una señal periódica estable que sirve como base para la construcción del sonido dentro del sistema modular.
+Su funcionamiento se basa en la combinación de dos circuitos integrados: el CD4046, utilizado como oscilador controlado por voltaje (VCO), y el CD40106, compuesto por inversores Schmitt Trigger que permiten acondicionar y estabilizar la señal generada por el oscilador.
+La integración de ambos circuitos entrega un comportamiento estable y permite modificar la frecuencia mediante controles manuales, generando distintas alturas tonales y variaciones sonoras que posteriormente son enviadas al módulo de mezcla.
 
+---
 
-## criterios de diseño del sistema
+**¿Cómo funciona?:**
 
-inspiración para construir, desde donde partieron
+El circuito recibe una alimentación externa de 12 V, la cual pasa primero por un diodo de protección y luego por un regulador 7805, encargado de entregar una tensión constante de 5 V para alimentar los circuitos integrados.
 
-contexto desde Chile, desde nuestra disponibilidad material
+El CD4046 funciona como un oscilador controlado por voltaje. Su frecuencia depende de una red RC formada por resistencias, capacitores y potenciómetros, permitiendo modificar manualmente la velocidad de oscilación.
+Posteriormente, la señal es enviada al CD40106, el cual utiliza compuertas Schmitt Trigger para regenerar la onda y producir una señal cuadrada con transiciones más limpias y estables. Este acondicionamiento disminuye el ruido presente en la señal y mejora la calidad del audio obtenido.
+Finalmente, la señal es conducida hacia el jack de salida, desde donde puede conectarse a un mixer, amplificador u otros módulos del sintetizador.
 
-nombre de sistema/instrumento construido por medio de módulos
+**Entrada**
+La placa recibe:
 
-## placas soldadas
++ Alimentación DC de 12 V.
++ Ajustes manuales mediante dos potenciómetros de 100 kΩ.
++ Conexión a tierra común con el resto del sistema.
 
-nombres de placas armadas
+**Salida**
+Entrega una:
 
-principio de funcionamiento de cada una
++ Onda cuadrada (Square Wave).
++ Señal digital de aproximadamente 5 V.
++ Frecuencia variable controlada por el usuario.
++ Salida mediante jack mono de audio.
 
-qué tipo de señal entrega a la salida, qué recibe
+Esta señal constituye la fuente sonora principal del sintetizador.
 
-lista de materiales con costos. Incluir tiempo de soldadura
+**Rol dentro del sistema:**
+
+Dentro de Vitrina Sónica, Comando Estelar actúa como uno de los módulos encargados de producir el material sonoro base. Gracias a su capacidad de modificar la frecuencia mediante controles físicos, permite obtener diferentes alturas y texturas que posteriormente pueden combinarse con otros módulos del sistema.
+
+## Resonancia 
+
+Resonancia corresponde al segundo módulo generador del sintetizador. Aunque comparte la misma arquitectura base del primer oscilador, incorpora un CD4017, contador decimal que introduce un comportamiento secuencial dentro del circuito.
+Este módulo no solo genera una señal sonora, sino que además agrega variaciones rítmicas y cambios periódicos, permitiendo enriquecer la composición del sintetizador mediante la interacción entre el oscilador y la lógica secuencial.
+
+---
+
+**¿Cómo funciona?**
+
+Al igual que la primera placa, la alimentación de 12 V es regulada mediante un 7805, obteniendo una tensión estable de 5 V.
+
+El CD4046 genera la frecuencia principal del sistema. Posteriormente, la señal es acondicionada mediante el CD40106, obteniendo una onda cuadrada limpia y estable.
+La principal diferencia de este módulo es la incorporación del CD4017, un contador Johnson que utiliza la señal del oscilador como reloj (Clock). Cada pulso recibido hace avanzar el contador hacia una salida distinta, permitiendo crear secuencias temporales y modificaciones periódicas del comportamiento del circuito.
+Este mecanismo introduce una dimensión rítmica dentro del sintetizador, haciendo que la señal evolucione de manera automática en lugar de mantenerse constante.
+
+**Entrada**
+La placa recibe:
+
++ Alimentación DC de 12 V.
++ Señal de reloj generada por el oscilador.
++ Ajustes mediante potenciómetros.
++ Tierra común con el resto de los módulos.
+
+**Salida**
+Entrega:
+
++ Onda cuadrada.
++ Señales secuenciales controladas por el CD4017.
++ Variaciones periódicas de frecuencia.
++ Señal de audio mediante jack.
+
+**Rol dentro del sistema:**
+
+Resonancia complementa el funcionamiento de Comando Estelar incorporando una lógica de secuenciación. En lugar de producir únicamente un tono continuo, añade cambios temporales que enriquecen el comportamiento del sintetizador y permiten obtener una mayor diversidad de sonidos al combinar ambos módulos dentro del mixer.
+
 
 ## carcasa
 
